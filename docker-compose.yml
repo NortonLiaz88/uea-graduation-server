@@ -1,0 +1,12 @@
+version: "3"
+services:
+  api:
+    container_name: uea-post-graduation-api-container
+    build: .
+    image: uea-graduation-api
+    restart: always
+    volumes:
+      - .:/usr/src/uea-graduation-api
+    ports:
+      - "8888:8888"
+      - "9229:9229"
